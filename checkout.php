@@ -21,6 +21,6 @@
       <dd><?php echo $_POST["nome"]; ?></dd>
     </dl>
 
-    
+
 </body>
 </html> 
