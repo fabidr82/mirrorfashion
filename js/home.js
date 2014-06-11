@@ -5,7 +5,7 @@ document.querySelector('#form-busca').onsubmit = function () {
  }
 };
 
-var banners = ["img/destaque-home.png", "img/destaque-home-2.png"];
+var banners = ["img/destaque-home.jpg", "img/destaque-home-2.jpg"];
 var bannerAtual = 0;
 
 function trocaBanner() {
@@ -29,4 +29,20 @@ controle.onclick = function() {
 	return false;
 };
 
+$('.novidades,.mais-vendidos').addClass('painel-compacto');
 
+$('.novidades button').click(function() {
+	$('.novidades').toggleClass('painel-compacto');
+
+	$(this).text(function(i, text){
+		return text === "Mostra mais" ? "Mostra menos" : "Mostra mais";
+	}) 
+});
+
+$('.mais-vendidos button').click(function() {
+	$('.mais-vendidos').toggleClass('painel-compacto');
+
+	$(this).text(function(i, text){
+		return text === "Mostra mais" ? "Mostra menos" : "Mostra mais";
+	}) 
+});

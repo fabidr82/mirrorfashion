@@ -288,4 +288,17 @@ footer .container {
 	border-top: 15px solid transparent;
 }
 
+/*.painel button {
+	display: none;
 
+} */
+
+.painel-compacto li:nth-child(n+7) {
+	display: none;
+
+}
+
+.painel-compacto button {
+	display: block;
+
+}

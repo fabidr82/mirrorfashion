@@ -12,28 +12,28 @@ include("cabecalho.php");
 <div class="produto-back">
   <div class="container">
     <div class="produto">
-      <h1><?php echo $produto["nome"]; ?></h1>
-      <p>por apenas <?php echo $produto["preco"]; ?></p>
+      <h1><?= $produto["nome"] ?></h1>
+      <p>por apenas <?= $produto["preco"] ?></p>
 
       <form action="checkout.php" method="POST">
-        <input type="hidden" name="nome" value="<?php echo $produto["nome"]; ?>">
-        <input type="hidden" name="id" value="<?php echo $produto["id"]; ?>">
+        <input type="hidden" name="nome" value="<?= $produto['nome'] ?>">
+        <input type="hidden" name="id" value="<?= $produto['id'] ?>">
         <fieldset class="cores">
           <legend>Escolha a cor</legend>
 
           <input type="radio" name="cor" value="verde" id="verde" checked>
           <label for="verde">
-            <img src="img/produtos/foto<?php echo $produto["id"]; ?>-verde.png" alt="verde">
+            <img src="img/produtos/foto<?= $produto['id'] ?>-verde.jpg" alt="verde">
           </label>
 
           <input type="radio" name="cor" value="rosa" id="rosa">
           <label for="rosa">
-            <img src="img/produtos/foto<?php echo $produto["id"]; ?>-rosa.png" alt="rosa">
+            <img src="img/produtos/foto<?php echo $produto['id']; ?>-rosa.jpg" alt="rosa">
           </label>
 
           <input type="radio" name="cor" value="azul" id="azul">
           <label for="azul">
-            <img src="img/produtos/foto<?php echo $produto["id"]; ?>-azul.png" alt="azul">
+            <img src="img/produtos/foto<?= $produto['id'] ?>-azul.jpg" alt="azul">
           </label>
 
         </fieldset>
@@ -42,6 +42,8 @@ include("cabecalho.php");
           <legend>Escolha o tamanho</legend>
 
           <input type="range" min="36" max="46" value="42" step="2" name="tamanho" id="tamanho">
+					<output for="tamanho" name="valortamanho">42</output>
+
         </fieldset>
 
         <input type="submit" class="comprar" value="Comprar">
@@ -50,7 +52,7 @@ include("cabecalho.php");
     <div class="detalhes">
       <h2>Detalhes do produto</h2>
 
-      <p><?php echo $produto["descricao"]; ?></p>
+      <p><?= $produto["descricao"] ?></p>
 
         <table>
           <thead>
@@ -81,6 +83,9 @@ include("cabecalho.php");
       </div> 
     </div>
   </div>
+
+	<script src="js/jquery.js"></script>
+	<script src="js/produto.js"></script>
 
   <?php include("rodape.php"); ?>
 </body>

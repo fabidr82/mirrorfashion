@@ -204,3 +204,65 @@ td:first-child {
 .cores label img {
 	border: 2px solid #ccc;
 }
+
+.tamanhos output {
+	display: inline-block;
+	height: 44px;
+	width: 44px;
+	line-height: 44px;
+	text-align: center;
+	
+	border: 3px solid #666;
+	border-radius: 50px;
+	color: #555;	 
+
+}
+
+.painel button {
+	color: white;
+	position: relative;
+	margin-bottom: 10px;
+	float: right;
+	margin-right: 10px;
+	padding: 10px;
+
+	background-color: #333;
+	border: 0;
+	border-radius: 4px;
+	box-shadow: 1px 1px 3px rgba(30,30,30,0.5);
+	color: white;
+	font-size: 1em;
+	text-decoration: none;
+	text-shadow: 1px 0 1px black;
+
+	transition: 0.3s;
+
+}
+
+.painel button:hover {
+	background: #393939;
+	box-shadow: 1px 0 20px rgba(200,200,200,0.9);
+}
+
+.painel button:after {
+	content: '';
+	display: block;
+	height: 0;
+	width: 0;
+
+	border-top: 10px solid #333;
+	border-left: 10px solid transparent;
+	border-right: 10px solid transparent;
+
+	position: absolute;
+	top: 100%;
+	left: 50%;
+	margin-left: -5px;
+
+	transition: 0.3s;
+
+}
+
+.painel button:hover:after {
+	border-top-color: #393939; 
+}
